@@ -1,4 +1,3 @@
-// blablabla
 
 // The Rover Object
 const rover = {
@@ -77,4 +76,3 @@ console.log(`Rover's position : x= ${rover.x} y= ${rover.y}`);
 for (let i = 0; i < rover.travelLog.length; i++) {
   console.log(`Step ${i} ==> x=${rover.travelLog[i].x}, y=${rover.travelLog[i].y}`);
 }
-
