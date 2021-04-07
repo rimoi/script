@@ -1,3 +1,5 @@
+// blablabla
+
 // The Rover Object
 const rover = {
   direction : "N",
@@ -6,34 +8,6 @@ const rover = {
   travelLog: [{x: 0, y: 0}]
 }
 
-// Turning the rover left 
- function turnLeft(rover) {
-
-  if (
-      rover.x >= 0
-      && rover.y >= 0
-      && rover.x <= 9
-      && rover.y <= 9
-  ) {
-    switch (rover.direction) {
-      case "N":
-        rover.direction = "W";
-        break;
-      case "W":
-        rover.direction = "S";
-        break;
-      case "S":
-        rover.direction = "E";
-        break;
-      case "E":
-        rover.direction = "N";
-        break;}
-    let newPosition = { x: rover.x, y: rover.y };
-    rover.travelLog.push(newPosition);
-  } else {
-    alert('Attention vous sortez du cadre');
-  }
-}
 
 // Turning the rover right
   function turnRight(rover) {
