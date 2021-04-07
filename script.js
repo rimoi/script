@@ -1,106 +1,24 @@
-// The Rover Object
-const rover = {
-  direction : "N",
-  x: 0,
-  y: 0,
-  travelLog: [{x: 0, y: 0}]
-}
 
-// Turning the rover left 
- function turnLeft(rover) {
 
-  if (
-      rover.x >= 0
-      && rover.y >= 0
-      && rover.x <= 9
-      && rover.y <= 9
-  ) {
-    switch (rover.direction) {
-      case "N":
-        rover.direction = "W";
-        break;
-      case "W":
-        rover.direction = "S";
-        break;
-      case "S":
-        rover.direction = "E";
-        break;
-      case "E":
-        rover.direction = "N";
-        break;}
-    let newPosition = { x: rover.x, y: rover.y };
-    rover.travelLog.push(newPosition);
-  } else {
-    alert('Attention vous sortez du cadre');
-  }
-}
+ document.addEventListener("DOMContentLoaded", () => {
+ const form = document.getElementById('formulaire');
+    form.addEventListener('submit', function (event) {
+       event.preventDefault();
+      let nickname = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let comment = document.getElementById('comment').value;
 
-// Turning the rover right
-  function turnRight(rover) {
-  switch (rover.direction) {
-    case "N":
-      rover.direction = "E";
-      break;
-    case "E":
-      rover.direction = "S";
-      break;
-    case "S":
-      rover.direction = "W";
-      break;
-    case "W":
-      rover.direction = "N";
-      break; }
-    let newPosition = { x: rover.x, y: rover.y };
-    rover.travelLog.push(newPosition);
-}
+      document.getElementById('notification').innerHTML = `
+        Votre ${email} et votre nom ${nickname} 
+      `;
 
-// Moving the rover 
+      console.log(nickname, email, comment);
 
-function moveForward(rover) {
-   switch (rover.direction) {
-    case "N":
-      rover.y--;
-      break;
-    case "E":
-      rover.x++;
-      break;
-    case "S":
-      rover.y++;
-      break;
-    case "W":
-      rover.x--;
-      break; }
-  let newPosition = { x: rover.x, y: rover.y };
-    rover.travelLog.push(newPosition);
-  }
 
-// Command
+    // $(".js-submit").serialize(),
+    });
+  });
 
-function command(rover, orders) {
-  // 'lrff'
-  // ['l', 'r', 'f', 'f']
 
-  const order2 = orders.split('');
-  for (let i = 0; i < order2.length; i++) {
-    switch (orders[i]) {
-      case "l": // left
-        turnLeft(rover);
-        break;
-      case "r": // right
-        turnRight(rover);
-        break;
-      case "f": // up
-        moveForward(rover);
-        break;
-    }
-  }
-}
-command(rover, "rflf");
-console.log(`Rover's position : x= ${rover.x} y= ${rover.y}`);
 
-// Tracking
-  
-for (let i = 0; i < rover.travelLog.length; i++) {
-  console.log(`Step ${i} ==> x=${rover.travelLog[i].x}, y=${rover.travelLog[i].y}`);
-}
 

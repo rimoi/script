@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
+
+body {
+  font-family: "roboto";
+}
+
+h1, p{
+	display: flex;
+	justify-content: center;
+}
+
+.form {
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+}
+
+.champs {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.bouton {
+	display: flex;
+	justify-content: center;
+}
+
+.titre {
+  color: darkblue;
+  background-color: lightblue;
+  padding: 5px;
+}
+
+button {
+  background-color: darkblue;
+  box-shadow: 8px 8px 0 lightblue;
+  color: white;
+  text-decoration: none;
+  padding: 10px 40px;
+  font-size: 100%;
+  font-weight: bold;
+  margin: 10px;
+}
