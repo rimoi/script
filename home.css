@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.search-text {
+    z-index: -10;
+}
+
+.loop {
+    z-index: 10;
+}
+
+._2f299eeb {
+    padding: 5px;
+    background: #f2f2f2;
+}
+._705cdf4f {
+    padding-top: 10px;
+}
+.pr1 {
+    padding-right: .25rem;
+}
+
+._705cdf4f {
+    padding-top: 10px;
+}
+
+._705cdf4f svg {
+    height: 18px;
+    width: 18px;
+}
+
+._0da775bb {
+    font-family: 'Poppins';
+    letter-spacing: 0.3px;
+    font-weight: bold;
+    background-color: #231f20;
+}
+
+._5b436c1a {
+    display: block
+}
+
+._5b436c1a strong {
+    display: block
+}

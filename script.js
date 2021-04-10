@@ -2,8 +2,10 @@
 
  document.addEventListener("DOMContentLoaded", () => {
  const form = document.getElementById('formulaire');
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', (event) => {
+        // arrret la soumission de la page
        event.preventDefault();
+
       let nickname = document.getElementById('name').value;
       let email = document.getElementById('email').value;
       let comment = document.getElementById('comment').value;
